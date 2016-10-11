@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var valueSentFromSecondViewController : [String] = []
     @IBOutlet weak var label: UILabel!
     var labelText = String ()
-    
+       var city : String = String ()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -38,11 +38,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier:"Cell")
-        var city : String = String ()
+     
         city = valueSentFromSecondViewController[indexPath.row]
         //what content we want within the cell
         cell.textLabel?.text=city
         return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    
+        {   performSegue(withIdentifier: "vc3", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,12 +55,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let destViewController : AddCityViewController = segue.destination as! AddCityViewController
             destViewController.delegate = self
             destViewController.cities = valueSentFromSecondViewController
+  
+            if (segue.identifier == "vc3")  {
+                let destViewController : CityDetailedViewController = segue.destination as! CityDetailedViewController
+                destViewController.newCity = self.city
+                
         }
+    }
     }
     
     func resultOfBusinessLogic(valueSent:[String]) {
         self.valueSentFromSecondViewController = valueSent
         
     }
+    
 }
 

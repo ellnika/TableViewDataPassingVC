@@ -13,6 +13,7 @@
 		CE07AAED1DAABE24005F001A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE07AAEC1DAABE24005F001A /* Assets.xcassets */; };
 		CE07AAF01DAABE24005F001A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE07AAEE1DAABE24005F001A /* LaunchScreen.storyboard */; };
 		CE07AAFC1DAAC3E6005F001A /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07AAFB1DAAC3E6005F001A /* AddCityViewController.swift */; };
+		CE07AAFE1DAC2C79005F001A /* CityDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07AAFD1DAC2C78005F001A /* CityDetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CE07AAEF1DAABE24005F001A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE07AAF11DAABE24005F001A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE07AAFB1DAAC3E6005F001A /* AddCityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCityViewController.swift; path = ../AddCityViewController.swift; sourceTree = "<group>"; };
+		CE07AAFD1DAC2C78005F001A /* CityDetailedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CE07AAE51DAABE24005F001A /* AppDelegate.swift */,
 				CE07AAE71DAABE24005F001A /* ViewController.swift */,
 				CE07AAFB1DAAC3E6005F001A /* AddCityViewController.swift */,
+				CE07AAFD1DAC2C78005F001A /* CityDetailedViewController.swift */,
 				CE07AAE91DAABE24005F001A /* Main.storyboard */,
 				CE07AAEC1DAABE24005F001A /* Assets.xcassets */,
 				CE07AAEE1DAABE24005F001A /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				CE07AAE81DAABE24005F001A /* ViewController.swift in Sources */,
 				CE07AAFC1DAAC3E6005F001A /* AddCityViewController.swift in Sources */,
+				CE07AAFE1DAC2C79005F001A /* CityDetailedViewController.swift in Sources */,
 				CE07AAE61DAABE24005F001A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
