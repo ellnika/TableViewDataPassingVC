@@ -10,15 +10,19 @@ import UIKit
 
 class CityDetailedViewController: UIViewController {
     
-    @IBOutlet weak var displayCityLabel: UILabel!
- @IBOutlet weak var cityName: UINavigationItem!
-    var newCity = String()
+
+    @IBOutlet var cityDetailsNavBar: UINavigationItem!
+    
+    var newCity:String!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        displayCityLabel.text = newCity;
-      cityName.title = newCity
-        //cityName.title = "Hello"
+//        displayCityLabel.text = newCity;
+//        let newNavigationbar = "City Details -" + newCity
+//        
+//        cityDetailsNavBar.title = newNavigationbar
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +30,15 @@ class CityDetailedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+        cityDetailsNavBar.title = newCity
+    }
+    
+    
+    @IBAction func dismissButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: {});
+    }
     /*
     // MARK: - Navigation
 

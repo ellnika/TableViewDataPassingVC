@@ -13,15 +13,17 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, AddCityViewDelegate {
     //will hold the value sent from the second view controller
     var valueSentFromSecondViewController : [String] = []
-    @IBOutlet weak var label: UILabel!
+
     var labelText = String ()
        var city : String = String ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        label.text = labelText
     }
 
+    @IBAction func addButtonClicked(_ sender: AnyObject) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,29 +47,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    
-        {   performSegue(withIdentifier: "vc3", sender: self)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "vc2")  {
             let destViewController : AddCityViewController = segue.destination as! AddCityViewController
             destViewController.delegate = self
             destViewController.cities = valueSentFromSecondViewController
+        }
   
             if (segue.identifier == "vc3")  {
-                let destViewController : CityDetailedViewController = segue.destination as! CityDetailedViewController
-                destViewController.newCity = self.city
-                
+                let destViewController1 : CityDetailedViewController = segue.destination as! CityDetailedViewController
+                destViewController1.newCity = self.city
+                print (destViewController1.newCity)
         }
     }
-    }
+    
     
     func resultOfBusinessLogic(valueSent:[String]) {
         self.valueSentFromSecondViewController = valueSent
         
     }
-    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+        
+    {   performSegue(withIdentifier: "vc3", sender: self)
+    }
 }
 

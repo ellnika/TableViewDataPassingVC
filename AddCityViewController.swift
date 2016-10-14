@@ -29,6 +29,12 @@ class AddCityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func saveButton1(_ sender: AnyObject) {
+        
+        oneCity = inputCityName.text!
+        cities.append(oneCity)
+        performSegue(withIdentifier: "vc1", sender: sender)
+    }
 
     /*
     // MARK: - Navigation
@@ -39,13 +45,7 @@ class AddCityViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    @IBAction func saveButtonClicked(_ sender: AnyObject) {
-       
-         oneCity = inputCityName.text!
-        cities.append(oneCity)
-       performSegue(withIdentifier: "vc1", sender: sender)
-        
-    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "vc1")  {
         let destViewController : ViewController = segue.destination as! ViewController
