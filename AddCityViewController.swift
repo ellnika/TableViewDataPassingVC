@@ -53,6 +53,9 @@ class AddCityViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         performSegue(withIdentifier: "vc1", sender: sender)
     }
 
+    @IBAction func cancelButton(_ sender: AnyObject) {
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -67,10 +70,7 @@ class AddCityViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if (segue.identifier == "vc1")  {
         let destViewController : ViewController = segue.destination as! ViewController
             destViewController.resultOfBusinessLogic(valueSent: citiesCreatedInAddCityViewController, ratingSent: ratingsForAllCitiesArray)
-       // destViewController.labelText=inputCityName.text!
-          //  destViewController.ratingAddedFromAddCityViewController.append(newRatingAdded)
 
-            print("The rating value is\(destViewController.ratingAddedFromAddCityViewController)")
         }
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {

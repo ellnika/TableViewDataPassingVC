@@ -103,7 +103,8 @@
                                     <navigationItem title="Add New City " id="sSm-Lv-4KW">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="F11-MX-g99">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="presentation" id="Phm-e8-8M1"/>
+                                                <action selector="cancelButton:" destination="BAe-xf-jGS" id="mxl-v0-6Oe"/>
+                                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="vc1" id="Phm-e8-8M1"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Mny-ko-7jc">
