@@ -23,11 +23,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Wd7-si-rR0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Wd7-si-rR0" customClass="customCell" customModule="Cities" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wd7-si-rR0" id="lIk-hZ-EtP">
-                                            <frame key="frameInset" width="342" height="43"/>
+                                            <frame key="frameInset" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -55,6 +55,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="eDo-gw-80W" id="Mp9-2c-S4v"/>
                         <segue destination="sQ4-g1-GlB" kind="presentation" identifier="vc3" id="w3Y-Sb-Df9"/>
                     </connections>
                 </viewController>
@@ -95,13 +96,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rating 1-5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6hC-9x-TG5">
-                                <frame key="frameInset" minX="113" minY="143" width="222" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zsy-OA-6c0">
                                 <frame key="frameInset" minY="28" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -120,11 +114,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyV-z7-QPI">
+                                <connections>
+                                    <outlet property="dataSource" destination="BAe-xf-jGS" id="GYX-qm-9Oi"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AyV-z7-QPI" firstAttribute="centerX" secondItem="O90-l6-hzS" secondAttribute="centerX" id="iLh-Te-BUN"/>
+                            <constraint firstItem="AyV-z7-QPI" firstAttribute="centerY" secondItem="O90-l6-hzS" secondAttribute="centerY" id="q6Z-ix-EY7"/>
+                            <constraint firstItem="AyV-z7-QPI" firstAttribute="width" secondItem="O90-l6-hzS" secondAttribute="width" id="ykI-c0-XD6"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="inputCityName" destination="rB5-Pl-cw4" id="INO-Y0-YJq"/>
+                        <outlet property="pickerView" destination="AyV-z7-QPI" id="Sat-ix-WPO"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="vc1" id="ogA-tb-BfI"/>
                     </connections>
                 </viewController>
@@ -178,6 +183,7 @@
                     <navigationItem key="navigationItem" title="Title" id="r0I-XK-Zzt"/>
                     <connections>
                         <outlet property="cityDetailsNavBar" destination="ToX-By-WDw" id="cqx-tW-Zdv"/>
+                        <outlet property="ratingLabel" destination="NEB-LK-fiH" id="tQn-ES-g9W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgY-FP-h1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -186,6 +192,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ogA-tb-BfI"/>
+        <segue reference="Phm-e8-8M1"/>
     </inferredMetricsTieBreakers>
 </document>

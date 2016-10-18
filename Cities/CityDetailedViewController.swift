@@ -9,12 +9,13 @@
 import UIKit
 
 class CityDetailedViewController: UIViewController {
-    
 
     @IBOutlet var cityDetailsNavBar: UINavigationItem!
+    @IBOutlet var ratingLabel: UILabel!
     
-    var newCity:String!
-   
+    var detailedCityName:String!
+    var rating:Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +33,8 @@ class CityDetailedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        cityDetailsNavBar.title = newCity
+        cityDetailsNavBar.title = detailedCityName
+        ratingLabel.text = String(rating)
     }
     
     

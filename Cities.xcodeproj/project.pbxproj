@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C74E8AA81DB611FA00838F1F /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C74E8AA71DB611FA00838F1F /* customCell.swift */; };
 		CE07AAE61DAABE24005F001A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07AAE51DAABE24005F001A /* AppDelegate.swift */; };
 		CE07AAE81DAABE24005F001A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE07AAE71DAABE24005F001A /* ViewController.swift */; };
 		CE07AAEB1DAABE24005F001A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE07AAE91DAABE24005F001A /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C74E8AA71DB611FA00838F1F /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		CE07AAE21DAABE23005F001A /* Cities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE07AAE51DAABE24005F001A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE07AAE71DAABE24005F001A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				CE07AAE51DAABE24005F001A /* AppDelegate.swift */,
+				C74E8AA71DB611FA00838F1F /* customCell.swift */,
 				CE07AAE71DAABE24005F001A /* ViewController.swift */,
 				CE07AAFB1DAAC3E6005F001A /* AddCityViewController.swift */,
 				CE07AAFD1DAC2C78005F001A /* CityDetailedViewController.swift */,
@@ -144,6 +147,7 @@
 			files = (
 				CE07AAE81DAABE24005F001A /* ViewController.swift in Sources */,
 				CE07AAFC1DAAC3E6005F001A /* AddCityViewController.swift in Sources */,
+				C74E8AA81DB611FA00838F1F /* customCell.swift in Sources */,
 				CE07AAFE1DAC2C79005F001A /* CityDetailedViewController.swift in Sources */,
 				CE07AAE61DAABE24005F001A /* AppDelegate.swift in Sources */,
 			);
@@ -305,6 +309,7 @@
 				CE07AAF61DAABE24005F001A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
